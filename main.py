@@ -1,12 +1,12 @@
 from conversions import from_binary_to_decimal
-from exceptions import BinaryToDecimalError
+from exceptions import ConversionError
 
 if __name__ == '__main__':
     binary_string = input("Enter a binary number: ")
     try:
         decimal_number = from_binary_to_decimal(value=binary_string)
         print(f"{binary_string}b = {decimal_number}d")
-    except BinaryToDecimalError as e:
+    except ConversionError as e:
         print(e)
 
 '''
