@@ -1,6 +1,6 @@
-class BinaryToDecimalError(Exception):
-    def __init__(self, value):
+class ConversionError(Exception):
+    def __init__(self, value="the input value is not valid"):
         self.value = value
 
     def __str__(self):
-        return f"Error: {repr(self.value)}"
+        return f"Error: {self.value}"
