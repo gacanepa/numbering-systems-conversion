@@ -1,4 +1,4 @@
-from conversions import from_binary_to_decimal
+from conversions import from_binary_to_decimal, from_decimal_to_binary
 from exceptions import ConversionError
 
 if __name__ == '__main__':
@@ -9,9 +9,15 @@ if __name__ == '__main__':
     except ConversionError as e:
         print(e)
 
+    try:
+        decimal_string = input("Enter an integer number: ")
+        binary_number = from_decimal_to_binary(decimal_string)
+        print(f"{decimal_string}d = {binary_number}b")
+    except ConversionError as e:
+        print(e)
+
 '''
 TO-DOs:
-- Decimal to binary conversion
 - Hexadecimal to binary
 - Binary to hexadecimal
 - Octal to binary
